@@ -1,0 +1,151 @@
+<script>
+   $(function () {
+       var navLi = $(".HouseDetails_nav li")
+       var windowUrl = location.protocol + '//' + location.hostname + location.pathname;
+
+       navLi.each(function () {
+           var t = $(this).find("a").attr("href");
+           if(t==windowUrl){
+               $(this).addClass("on").siblings().removeClass("on")
+           }
+       });
+   });
+</script>
+
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+.container {
+    width           : 100vw;
+    height          : 10vh;
+    background-color: var;
+    align-items     : center;
+    justify-content : center;
+    display         : flex;
+    font-family     : 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+
+.channel {
+    position   : absolute;
+    width      : 80%;
+    text-align : center;
+    top        : 50%;
+    left       : 50%;
+    transform  : translate(-50%, -200px);
+    font-size  : 30px;
+    font-weight: bold;
+    color      : #fff;
+}
+
+nav {
+    position        : relative;
+    height          : 50px;
+    background-color: #007fff;
+    border-radius   : 8px;
+    box-shadow      : 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    position   : relative;
+    display    : block;
+    float      : left;
+    font-size  : 15px;
+    line-height: 50px;
+
+    height             : 50px;
+    color              : black;
+    text-transform     : uppercase;
+    text-decoration    : none;
+    text-align         : center;
+    z-index            : 10;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+
+nav a:nth-child(2) {
+    width: 110px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+
+nav .animation {
+    position        : absolute;
+    height          : 100%;
+    background-color: white;
+    z-index         : 9;
+    border-radius   : 8px;
+    transition: all 0.3s;
+}
+
+.start-home,
+nav a:nth-child(1):hover~.animation {
+    width: 100px;
+    left : 0px;
+}
+.start-about,
+nav a:nth-child(2):hover~.animation {
+    width: 110px;
+    left : 100px;
+}
+.start-courses,
+nav a:nth-child(3):hover~.animation {
+    width: 100px;
+    left : 210px;
+}
+.writer-img {
+    -webkit-box-shadow: 10px 0px 10px 0px rgba(0, 0, 50, 0.97);
+    -moz-box-shadow: 10px 0px 10px 0px rgba(0, 0, 50, 0.97);
+    box-shadow: 10px 0px 10px 0px rgba(0, 0, 50, 0.97);
+    float: left;
+    width: 100px;
+}
+.byline {
+    font-family: Helvetica;
+    color:purple;
+    float: left;
+    font-size: 14px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+body{
+    background-color: rgb(215, 237, 255);
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin-left: 40px;
+    padding-top: 100px;
+}
+div .schoolpic{
+    display: block;
+    width: 300px;
+    border: solid 5px red;
+}
+div .aborder{
+    margin:0 auto;
+    display: block;
+    width: 1000px;
+    border: solid 5px white;
+}
+div .coinf{
+    display: block;
+    width: 1500px;
+    border: solid 5px red;  
+}
+div .class{
+    display: block;
+    width: 1000px;
+    border: solid 5px red;  
+}

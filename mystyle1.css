@@ -1,0 +1,18 @@
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+
+body{
+    background-color: rgb(215, 237, 255);
+    padding-top: 10%;
+}
+p{
+    font-size: large;
+}
